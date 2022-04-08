@@ -40,18 +40,15 @@ scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/aut
 VC_Dates = ServiceAccountCredentials.from_json_keyfile_name("Test Automation-d80004c7278c.json" , scope)
 client = gspread.authorize(VC_Dates)
 sheet = client.open("VC_DATE_API_FOR_AUTOMATION").sheet1 # Open the spreadhseet
-#data = sheet.get_all_records() # Get a list of all records
-#print(data)
+
 
 First_Notification_Cell = sheet.cell(3,2).value#FOR FIRST NOTIFICATION
 PWCB_Date_Today = sheet.cell(3,1).value#FOR PWCB NOTIFICATION
 browser.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/div[4]/div/div/div/div[2]/div[2]/div[3]/div[2]/div[4]/div[2]/div/div/div/input").send_keys(First_Notification_Cell)
 browser.find_element_by_xpath("//div[@id='app']/div/div/div[4]/div/div/div/div[2]").click()
 #---------------------------------FOR FILE UPLOAD---------------------------------------
-#browser.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/div[4]/div/div/div/div[2]/div[3]/div[4]/div[2]/div/label").click()
 browser.implicitly_wait(10)
 browser.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/div[4]/div/div/div/div[2]/div[3]/div[4]/div[2]/div/label/input").send_keys("C://Users//codemen//Documents//Nashrif//test help//pdf//insurance_secure - 1.docx")
-#browser.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/div[4]/div/div/div/div[2]/div[3]/div[4]/div[3]/div/label").click()
 browser.implicitly_wait(10)
 #browser.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/div[4]/div/div/div/div[2]/div[3]/div[4]/div[3]/div/label/input").send_keys("C://Users//codemen//Documents//Nashrif//test help//pdf//insurance_secure - 1.docx")
 browser.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/div[4]/div/div/div/div[2]/div[3]/div[4]/div[4]/div/label/input").send_keys("C://Users//codemen//Documents//Nashrif//test help//pdf//insurance_secure - 2.docx")
