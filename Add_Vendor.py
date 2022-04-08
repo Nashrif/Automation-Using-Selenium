@@ -28,28 +28,10 @@ browser.find_element_by_id("CompanyName").send_keys(Vendor_Name)
 browser.find_element_by_id("ContactName").send_keys(Vendor_Name)
 browser.find_element_by_id("GstOrHSt").send_keys(Vendor_Name)
 browser.find_element_by_id("Commercial").click()
-#browser.find_elements_by_css_selector("input[type='radio'][value='Contractor']").click() #Contractor
-#browser.find_elements_by_css_selector("input[type='radio'][value='Consultant']").click() #Consultant
-#browser.find_elements_by_css_selector("input[type='radio'][value='Supplier']").click() #Supplier
-
-#browser.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/div[4]/div/div/div/div[2]/div[1]/div[7]/div[1]/label/input").click() #Contractor
-#browser.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/div[4]/div/div/div/div[2]/div[1]/div[7]/div[1]/label/input").click() #Contractor
 browser.implicitly_wait(20)
-#browser.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/div[4]/div/div/div/div[2]/div[1]/div[5]/div/div/span[1]").click()
-#browser.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/div[4]/div/div/div/div[2]/div[1]/div[5]/div/div/span[1]").send_keys("Alberta")
-#region = browser.find_elements_by_xpath("/html/body/div[2]/div[1]/div/div/div[4]/div/div/div/div[2]/div[1]/div[5]/div/div/span[1]/div[1]").text
-#print('region')
-#browser.implicitly_wait(20)
-#select = Select(browser.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/div[4]/div/div/div/div[2]/div[1]/div[5]/div/div/span[1]"))
-#select = Select(browser.find_element_by_xpath(""/html/body/div[2]/div[1]/div/div/div[4]/div/div/div/div[2]/div[1]/div[5]/div/div/span[1]"))
-#browser.find_element_by_id("react-select-67--value-item").click()
-#select.select_by_value("2ad34df65e264528b4d38fa516b40054")
-#browser.implicitly_wait(20)
-#select.select_by_visible_text("Alberta")
-#browser.implicitly_wait(20)
-#browser.find_element_by_id("Retail").click()
+
 #------------------------------------for select region---------------
-#browser.find_element_by_id("react-select-6--value").click()
+
 browser.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/div[4]/div/div/div/div[2]/div[1]/div[5]/div/div/span[1]").click()
 browser.implicitly_wait(20)
 
@@ -64,35 +46,20 @@ browser.implicitly_wait(30)
 
 
 #--------------------------------For Email---------------
-#browser.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/div[4]/div/div/div/div[2]/div[1]/div[6]/div[1]/div/div[2]/div/textarea").send_keys("TEST")
 browser.find_element_by_id("NewVendoremail").send_keys(Email)
 browser.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/div[4]/div/div/div/div[2]/div[1]/div[6]/div[1]/div/div[2]/div/textarea").send_keys("TEST")
 #------------------------------for select city--------
 time.sleep(5)
 browser.find_element_by_xpath("//div[@id='app']/div/div/div[4]/div/div/div/div[2]/div/div[6]/div/div/div/div/div/div/span[2]").click()
-#browser.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/div[4]/div/div/div/div[2]/div[1]/div[6]/div[1]/div/div[1]/div/div/div/span[1]").click()
-#browser.implicitly_wait(20)
 time.sleep(5)
 select_city = browser.find_element_by_id("city")
 browser.implicitly_wait(50)
 select_city.send_keys("A")
 time.sleep(5)
-#browser.implicitly_wait(30)
 select_city.send_keys(Keys.DOWN,Keys.ENTER)
 browser.implicitly_wait(10)
-#select_city.send_keys(Keys.ARROW_DOWN)
-#select_city.send_keys(Keys.ARROW_DOWN)
-#select_city.send_keys(Keys.RETURN)
-#select_city = browser.find_element_by_id("react-select-7--value").click()
-#select_city = browser.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/div[4]/div/div/div/div[2]/div[1]/div[6]/div[1]/div/div[1]/div/div/div/span[1]/div[2]")
-#select_city.send_keys(Keys.RETURN)
-#browser.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/div[4]/div/div/div/div[2]/div[1]/div[6]/div[1]/div/div[2]/div/textarea").send_keys("TEST")
-
-
 browser.implicitly_wait(4000)
-#browser.find_element_by_name("Value").send_keys(Keys.RETURN)
-#browser.find_element_by_xpath("//span[@id='react-select-14--value']/div").click()
 browser.find_element_by_id("submit").click()
 
 time.sleep(30)
-#browser.quit()
+
